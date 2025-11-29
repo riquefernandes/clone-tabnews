@@ -10,6 +10,7 @@ function Home() {
   return (
     <>
       <h1>{value}</h1>
+      <h1>teste</h1>
       <button onClick={count}>Increment</button>
     </>
   );
