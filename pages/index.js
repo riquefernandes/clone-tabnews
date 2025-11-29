@@ -11,6 +11,7 @@ function Home() {
     <>
       <h1>{value}</h1>
       <h1>teste</h1>
+      <h1>Agora vai né?</h1>
       <button onClick={count}>Increment</button>
     </>
   );
