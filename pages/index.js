@@ -1,18 +1,12 @@
 import { useState } from "react";
 
 function Home() {
-  const [value, setValue] = useState(0);
-
-  const count = () => {
-    setValue(prev => prev + 1);
-  };
 
   return (
     <>
-      <h1>{value}</h1>
-      <h1>teste</h1>
-      <h1>Agora vai né?</h1>
-      <button onClick={count}>Increment</button>
+        <h1>Camilinha do meu coração, eu te amo de montão</h1>
+        <h2>Se você também me ama me ama, da um sorrizinho</h2>
+        <p>Esse "site" está visivel para o mundo inteiro ver, inclusive você</p>
     </>
   );
 }
