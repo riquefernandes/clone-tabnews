@@ -7,10 +7,10 @@ async function cleanDatabase() {
 beforeAll(cleanDatabase);
 
 test("Post migrations to /api/v1/status shold return 200", async () => {
-  const response = await fetch("http://localhost:3000/api/v1/migrations", {
+  const response1 = await fetch("http://localhost:3000/api/v1/migrations", {
     method: "POST",
   });
-  expect(response.status).toBe(200);
-  const responseBody = await response.json();
-  expect(Array.isArray(responseBody)).toBe(true);
+  expect(response1.status).toBe(201);
+  const response1Body = await response1.json();
+  expect(Array.isArray(response1Body)).toBe(true);
 });

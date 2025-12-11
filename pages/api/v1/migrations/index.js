@@ -11,17 +11,20 @@ async function status(request, response) {
     migrationsTable: "pgmigrations",
   };
   if (request.method === "GET") {
-    const migrations = await migrationRunner(defaultMigrationsOptions);
-    return response.status(200).json(migrations);
+    const pendingMigrations = await migrationRunner(defaultMigrationsOptions);
+    return response.status(200).json(pendingMigrations);
   }
 
   if (request.method === "POST") {
-    const migrations = await migrationRunner({
+    const migratedMigration = await migrationRunner({
       ...defaultMigrationsOptions,
       dryRun: false,
     });
 
-    console.log("entrou no post");
+    if (migratedMigration.length > 0) {
+      return response.status(201).json(migratedMigration);
+    }
+
     return response.status(200).json(migrations);
   }
 
