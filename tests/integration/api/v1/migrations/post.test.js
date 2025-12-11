@@ -14,3 +14,5 @@ test("Post migrations to /api/v1/status shold return 200", async () => {
   const response1Body = await response1.json();
   expect(Array.isArray(response1Body)).toBe(true);
 });
+
+// teste
