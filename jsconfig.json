@@ -7,11 +7,6 @@
     "moduleResolution": "node",
     "target": "es6"
   },
-  "include": [
-    "**/*.js"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["**/*.js"],
+  "exclude": ["node_modules"]
 }
-
