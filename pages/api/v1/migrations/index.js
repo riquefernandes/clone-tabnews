@@ -30,7 +30,7 @@ async function status(request, response) {
       return response.status(201).json(migratedMigration);
     }
 
-    return response.status(200).json(migrations);
+    return response.status(200).json(migratedMigration);
   }
 
   return response.status(405).end();
