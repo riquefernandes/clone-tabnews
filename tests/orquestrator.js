@@ -8,7 +8,7 @@ async function waitForAllServices() {
 
     async function fetchStatusPage() {
       const response = await fetch("http://localhost:3000/api/v1/status");
-      const respnseBody = await response.json();
+      const responseBody = await response.json();
     }
   }
 }
